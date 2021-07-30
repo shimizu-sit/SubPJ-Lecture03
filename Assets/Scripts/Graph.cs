@@ -27,12 +27,13 @@ public class Graph : MonoBehaviour
                 x = 0;
                 z += 1;
             }
-            Transform point = points[i] = Instantiate(pointPrefab);
+            Transform point = Instantiate(pointPrefab);
             position.x = (x + 0.5f) * step - 1f;
             position.z = (z + 0.5f) * step - 1f;
             point.localPosition = position;
             point.localScale = scale;
             point.SetParent(transform, false);
+            points[i] = point;
         }
     }
 
