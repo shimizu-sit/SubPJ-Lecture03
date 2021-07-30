@@ -28,7 +28,6 @@ public class Graph : MonoBehaviour
                 z += 1;
             }
             Transform point = points[i] = Instantiate(pointPrefab);
-            points[i] = point;
             position.x = (x + 0.5f) * step - 1f;
             position.z = (z + 0.5f) * step - 1f;
             point.localPosition = position;
